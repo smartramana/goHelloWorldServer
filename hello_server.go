@@ -51,7 +51,7 @@ func main() {
 	waitForShutdown(srv)
 }
 
-func waitForShutdown(srv *http.Server) {
+func waitForShutdown1(srv *http.Server) {
 	interruptChan := make(chan os.Signal, 1)
 	signal.Notify(interruptChan, os.Interrupt, syscall.SIGINT, syscall.SIGTERM)
 
